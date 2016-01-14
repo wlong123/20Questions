@@ -52,39 +52,4 @@ public class TwentyQuestions
 		return tree;
 	}
 	
-	public static BinaryTree<String> initTree(String s)
-	{
-		BinaryTree<String> tree = new BinaryTree<String>();
-		String a = "";
-		int i = 0;
-		while(s.charAt(i) != '(')
-		{
-			a += s.charAt(i);
-			i++;
-		}
-		return tree;
-	}
-	
-	public static String ReadFile()
-	{
-		BinaryTree<String> tree = new BinaryTree<String>();
-		String s = "";
-		String pathname = "Test.txt";
-		File file = new File(pathname);	
-		Scanner input = null;
-		try
-		{
-			input = new Scanner(file);
-		}
-		catch (FileNotFoundException ex)
-		{
-			System.out.println(" Cannot open " + pathname );
-			System.exit(1);
-		}
-		while( input.hasNextLine() )
-		{
-			s += input.nextLine() + "\n";
-		}
-		return s;
-	}
 }
